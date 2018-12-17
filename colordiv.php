@@ -13,8 +13,7 @@ class ColorDiv extends Div
 
     public function getStyle()
     {
-        return "width: {$this->width}px; height: {$this->height}px; border: 1px solid #000; background: {$this -> bg};";
+        return "width: {$this->width}px; height: {$this->height}px; border: " . self:: BORDER_WIDTH . "px    solid " . self::$borderColor . "; background: {$this -> bg};";
     }
 
-    
 }

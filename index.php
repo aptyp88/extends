@@ -13,16 +13,26 @@ include_once 'roundedcolordiv.php';
 </head>
 <body>
     <?php
+
+        Div :: $borderColor = '#00f';
+
         $div = new Div(100, 50);
         echo $div;
+        echo $div -> getWidth();
         echo '<br>';
 
         $colorDiv = new ColorDiv(100, 50, '#f90');
         echo $colorDiv;
+        echo $colorDiv -> getWidth();
         echo '<br>';
-
+        
+        Div :: $borderColor = '#0ff';
+        // echo Div :: BORDER_WIDTH;
         $roundedColorDiv = new RoundedColorDiv(100, 50, '#f50', 12);
         echo $roundedColorDiv;
+        echo $roundedColorDiv -> getWidth();
+        echo '<br>';    
+        echo Div :: getBorder();
     ?>
 </body>
 </html>
